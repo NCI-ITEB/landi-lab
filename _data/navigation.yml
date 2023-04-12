@@ -1,0 +1,8 @@
+- name: Publications
+  link: /publications
+#- name: Softwares & Algorithms
+#  link: /software
+- name: Lab Members
+  link: /members
+- name: Positions
+  link: /positions

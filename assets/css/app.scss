@@ -1,0 +1,93 @@
+---
+---
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+$hero-darken: #000;
+// Set theme colors
+$link: #3273dc;
+$info: #3273dc;
+$primary: #3273dc;
+// Fonts
+$body-family: "Roboto";
+$title-family: "Montserrat";
+// Fully outline tables
+$content-table-head-cell-border-width:1px 1px 2px !default;
+$content-table-cell-border-width: 1px !default;
+$content-table-foot-cell-border-width: 1px;
+
+
+
+// Import Main CSS file from theme
+@import "main";
+// Add stripes, footer line, head row background color from theme to tables
+.content table tbody tr:last-child td, .content table tbody tr:last-child th {
+  border-bottom-width: 1px; };
+.content table thead td, .content table thead th {
+  border-width: $content-table-head-cell-border-width;
+  color: #ffffff;
+  background-color: $link};
+.content tbody tr:nth-child(even){
+  background-color: $table-striped-row-even-background-color};
+.content code{
+  color: #da1039};
+// Increase size of zoomed images
+.modal-content,.modal-card{
+  margin: 0 $modal-content-margin-mobile;
+  max-height: 90%;
+  overflow: auto;
+  position: relative;
+  width: 80%;};
+
+.text-active {
+  color: "red";
+}
+
+/* Scroll to top button */
+
+.cd-top {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    /* image replacement properties */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: rgba(232, 98, 86, 0.8) url(../img/cd-top-arrow.svg) no-repeat center 50%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+}
+.cd-top.cd-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: .5;
+}
+.no-touch .cd-top:hover {
+    background-color: #e86256;
+    opacity: 1;
+}
+
+.content pre {
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: auto;
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: normal;
+}
