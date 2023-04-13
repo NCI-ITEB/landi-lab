@@ -3,6 +3,8 @@ permalink: /members
 layout: page
 title: Members
 ---
+<img src="{{ site.baseurl }}/assets/Sherlock-picnic_1.png">
+
   <section class="px-4">
   {% for instructor in site.instructors %}
 	<figure class="image is-128x128" style="float:left; clear:left" >
